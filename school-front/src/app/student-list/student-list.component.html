@@ -1,0 +1,66 @@
+<div role="main" class="main">   
+    <div class="container py-5">
+    </div>
+    <!-- PRETRAZI -->
+    <div class="container py-2">
+        <label class="font-weight-bold text-dark text-2">Pretrazi studente</label>
+        <div class="form-row">
+            <div class="col-sm-5">
+                <input type="text" value="" class="form-control" name="name">
+            </div>
+            <div class="col-sm-5">
+                <button type="button" class="btn btn-primary mb-1">Pretrazi</button>
+            </div>
+        </div>
+    </div>
+    <!-- SPISAK STUDENATA -->
+    <div class="container py-2">
+        <div class="row">
+            <div class="col">
+
+                <div class="row">
+                    <div class="col pb-3">
+                        <h4>Hover rows</h4>
+
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Last Name
+                                    </th>
+                                    <th>
+                                        Username
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody *ngFor="let tempStudent of students">
+                                <tr>
+                                    <th>
+                                        {{ tempStudent.first_name}}
+                                    </th>
+                                    <th>
+                                        {{ tempStudent.last_name}}
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <hr class="solid my-5">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- DODAJ DUGMICE ZA DODAJ I OBRISI -->
+    <div class="container py-2">   
+        <div class="col-sm-9">
+            <button type="button" class="btn btn-primary mb-2">Dodaj</button>
+            <button type="button" class="btn btn-secondary mb-2">Obrisi</button>            
+        </div>              
+    </div>
+    <!-- PAGINACIJA -->
+</div>
+<p *ngFor="let tempStudent of students">
+    {{ tempStudent.first_name}} {{ tempStudent.last_name}}
+</p>
