@@ -5,15 +5,18 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { StudentService } from './services/student.service';
-import { StudentListComponent } from './student-list/student-list.component';
+import { StudentListComponent } from './components/student-list/student-list.component';
+import { SearchComponent } from './components/search/search.component';
 
-const routes: Routes = [
-  {path: 'students', component: StudentListComponent},
+const routes: Routes = [  
+  {path: 'search/:keyword', component: StudentListComponent},
+  {path: 'students', component: StudentListComponent}
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    StudentListComponent
+    StudentListComponent,
+    SearchComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

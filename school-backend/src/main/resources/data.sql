@@ -34,6 +34,8 @@ CREATE TABLE IF NOT EXISTS `school-database`.`student` (
 ENGINE=InnoDB
 AUTO_INCREMENT = 1;
 
+-- ALTER table `school-database`.`student` DROP COLUMN `last_name`;
+-- ALTER table `school-database`.`student` RENAME COLUMN  `first_name` TO  `name`;
 -- -----------------------------------------------------
 -- Add sample data
 -- -----------------------------------------------------

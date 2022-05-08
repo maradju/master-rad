@@ -1,18 +1,6 @@
 <div role="main" class="main">   
     <!-- <div class="container py-5">
     </div> -->
-    <!-- PRETRAZI -->
-    <div class="container py-2">
-        <label class="font-weight-bold text-dark text-2">Pretrazi studente</label>
-        <div class="form-row">
-            <div class="col-sm-5">
-                <input type="text" value="" class="form-control" name="name">
-            </div>
-            <div class="col-sm-5">
-                <button type="button" class="btn btn-primary mb-1">Pretrazi</button>
-            </div>
-        </div>
-    </div>
     <!-- SPISAK STUDENATA -->
     <div class="container py-2">
         <div class="row">
@@ -33,10 +21,7 @@
                             <tbody *ngFor="let tempStudent of students">
                                 <tr>
                                     <th>
-                                        {{ tempStudent.first_name}}
-                                    </th>
-                                    <th>
-                                        {{ tempStudent.last_name}}
+                                        {{ tempStudent.name}}
                                     </th>
                                 </tr>
                             </tbody>

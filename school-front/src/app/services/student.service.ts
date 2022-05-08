@@ -15,17 +15,29 @@ export class StudentService {
 
   getStudentList(): Observable<Student[]> {
 
-    // need to build URL based on category id 
-    const searchUrl = `${this.baseUrl}`;
-
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
       map(response => response._embedded.students)
     );
+
+  }
+
+  searchStudents(theKeyword: string): Observable<Student[]> {
+    console.log(`searchStudents service`);
+
+    // need to build URL based on category id 
+    const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}`;
+
+    return this.httpClient.get<GetResponse>(searchUrl).pipe(
+      map(response => response._embedded.students)
+    );
+    
   }
 }
 
-interface GetResponse {
-  _embedded: {
-    students: Student[];
+  interface GetResponse {
+   _embedded: {
+     students: Student[];
+    }
   }
-}
+
+

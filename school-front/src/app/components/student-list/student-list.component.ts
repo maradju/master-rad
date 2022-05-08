@@ -11,7 +11,8 @@ import { StudentService } from 'src/app/services/student.service';
 export class StudentListComponent implements OnInit {
 
   students:  Student[] = [];
-  
+  searchMode: boolean = false;
+
   constructor(private studentService: StudentService,
     private route: ActivatedRoute) { }
 
@@ -22,11 +23,40 @@ export class StudentListComponent implements OnInit {
   }
 
   listStudents() {
-    // now get the products for the given category id
+
+    this.searchMode = this.route.snapshot.paramMap.has('keyword');
+
+    if (this.searchMode) {
+      this.handleSearchStudents();
+    }
+    else {
+      this.handleListStudents();
+    }
+
+  }
+
+  handleListStudents() {
+    console.log(`okkkk`);
+
+    // vrati studente
     this.studentService.getStudentList().subscribe(
       data => {
         this.students = data;
       }
     )
   }
+
+  handleSearchStudents() {
+    const theKeyword: string = this.route.snapshot.paramMap.get('keyword')!;
+
+    console.log(`keyword=${theKeyword}`);
+
+    // pretrazi studente koristeci keywird
+    this.studentService.searchStudents(theKeyword).subscribe(     
+      data => {
+      this.students = data;
+      }
+    )
+  }
+
 }

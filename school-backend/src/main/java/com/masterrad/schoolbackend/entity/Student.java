@@ -15,11 +15,8 @@ public class Student {
     @Column(name="id")
     private Long id;
 
-    @Column(name="first_name")
-    private String first_name;
-
-    @Column(name="last_name")
-    private String last_name;
+    @Column(name="name")
+    private String name;
 
     @Column(name="email")
     private String email;
