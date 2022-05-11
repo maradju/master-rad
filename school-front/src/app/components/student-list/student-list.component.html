@@ -18,7 +18,7 @@
                             <tbody *ngFor="let tempStudent of students">
                                 <tr >
                                     <th >
-                                        <a routerLink = "/students/{{tempStudent.id}}">{{tempStudent.name}}</a>
+                                        <a routerLink = "/students/{{ tempStudent.id }}">{{tempStudent.name}}</a>
                                     </th>
                                 </tr>
                             </tbody>
@@ -27,7 +27,10 @@
                 </div>
             </div>
         </div>
-
+    <!-- if students empty then display a message-->
+        <div *ngIf="students?.length == 0">
+            No students found.
+        </div>
     </div>
     <!-- DODAJ DUGMICE ZA DODAJ I OBRISI -->
     <div class="container py-2">   

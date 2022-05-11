@@ -10,6 +10,7 @@ import { SearchComponent } from './components/search/search.component';
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
 
 const routes: Routes = [  
+  {path: 'students/:id', component: StudentDetailsComponent},
   {path: 'search/:keyword', component: StudentListComponent},
   {path: 'students', component: StudentListComponent},
   {path: ' ', redirectTo: '/students'},
