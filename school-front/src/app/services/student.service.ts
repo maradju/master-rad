@@ -32,6 +32,15 @@ export class StudentService {
     );
     
   }
+
+  
+  getStudent(theStudentId: number): Observable<Student> {
+
+    // need to build URL based on product id
+    const studentUrl = `${this.baseUrl}/${theStudentId}`;
+
+    return this.httpClient.get<Student>(studentUrl);
+  }
 }
 
   interface GetResponse {

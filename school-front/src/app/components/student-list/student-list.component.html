@@ -13,15 +13,12 @@
                                     <th>
                                         Last Name
                                     </th>
-                                    <th>
-                                        Username
-                                    </th>
                                 </tr>
                             </thead>
                             <tbody *ngFor="let tempStudent of students">
-                                <tr>
-                                    <th>
-                                        {{ tempStudent.name}}
+                                <tr >
+                                    <th >
+                                        <a routerLink = "/students/{{tempStudent.id}}">{{tempStudent.name}}</a>
                                     </th>
                                 </tr>
                             </tbody>
