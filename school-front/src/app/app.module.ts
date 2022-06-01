@@ -10,6 +10,7 @@ import { SearchComponent } from './components/search/search.component';
 import { StudentDetailsComponent } from './components/student-details/student-details.component';
 import { StudentAddComponent } from './components/student-add/student-add.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 const routes: Routes = [ 
   {path: 'students/add', component: StudentAddComponent},
   {path: 'students/:id', component: StudentDetailsComponent},

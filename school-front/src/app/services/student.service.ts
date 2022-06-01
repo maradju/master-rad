@@ -44,11 +44,28 @@ export class StudentService {
 
   save(student: Student): Observable<any> {
     
-    // need to build URL based on product id
+    
     const studentUrl = `${this.baseUrl}`;
 
     return this.httpClient.post<Student>(studentUrl, student);    
   }
+
+  deleteStudent(theStudentId: number) {
+    
+    // need to build URL based on product id
+    const studentUrl = `${this.baseUrl}/${theStudentId}`;
+
+    return this.httpClient.delete(studentUrl);
+  }
+
+  updateStudent(theStudentId: number, value: any) : Observable<Object> {
+     
+      // need to build URL based on product id
+      const studentUrl = `${this.baseUrl}/${theStudentId}`;
+
+      return this.httpClient.put(studentUrl, value);
+  }
+
 }
 
   interface GetResponse {
@@ -56,5 +73,3 @@ export class StudentService {
      students: Student[];
     }
   }
-
-

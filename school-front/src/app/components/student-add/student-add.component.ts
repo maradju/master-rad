@@ -12,7 +12,7 @@ import { StudentService } from 'src/app/services/student.service';
 export class StudentAddComponent implements OnInit {
 
   student: Student = new Student;
-  checkoutFormGroup!: FormGroup 
+  checkoutFormGroup!: FormGroup ;
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
@@ -44,8 +44,8 @@ export class StudentAddComponent implements OnInit {
   }
 
   
-  get name() { return this.checkoutFormGroup.get('customer.firstName'); }
-  get email() { return this.checkoutFormGroup.get('customer.lastName'); }
-  get jmbg() { return this.checkoutFormGroup.get('customer.email'); }
+  // get name() { return this.checkoutFormGroup.get('customer.firstName'); }
+  // get email() { return this.checkoutFormGroup.get('customer.lastName'); }
+  // get jmbg() { return this.checkoutFormGroup.get('customer.email'); }
 
 }
