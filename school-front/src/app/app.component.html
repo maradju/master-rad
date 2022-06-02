@@ -2,12 +2,19 @@
     <header id="header" class="side-header d-flex">
         <div class="header-body">
             <div class="header-container container d-flex h-100">
-                <div class="header-column flex-row flex-lg-column justify-content-center h-100">
-                    <div class="header-row flex-row justify-content-start justify-content-lg-center py-lg-5">
+                <div class="header-column flex-row flex-lg-column justify-content-left h-100">
+                    <div class="header-row flex-row justify-content-start justify-content-lg-left py-lg-5">
                         <div class="header-logo">
                             <a href="index.html">
                                 <img alt="Porto" width="100" height="48" src="../assets/img/logo.png">
                             </a>
+                            <!-- ------------------------- -->
+
+
+
+
+                           <!-- ------------------------- -->
+
                         </div>
                     </div>
                     <div class="header-row header-row-side-header flex-row h-100 pb-lg-5">
@@ -15,28 +22,28 @@
                             <div class="header-nav-main header-nav-main-square header-nav-main-dropdown-no-borders">
                                 <nav class="collapse">
                                     <ul class="nav nav-pills" id="mainNav">
-                                        <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle" href="studenti.html">
+                                        <li>
+                                            <a class="nav-link active" href="studenti.html">
                                                 Homepage
                                             </a>
                                         </li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle active" href="studenti.html">
+                                        <li>
+                                            <a class="nav-link" href="studenti.html">
                                                 Students
                                             </a>
                                         </li>
-                                        <li class="dropdown dropdown-mega">
-                                            <a class="dropdown-item dropdown-toggle" href="elements.html">
+                                        <li>
+                                            <a class="nav-link" href="elements.html">
                                                 Courses
                                             </a>
                                         </li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle" href="#">
+                                        <li>
+                                            <a class="nav-link" href="#">
                                                 Groups
                                             </a>
                                         </li>
-                                        <li class="dropdown">
-                                            <a class="dropdown-item dropdown-toggle" href="#">
+                                        <li>
+                                            <a class="nav-link" href="#">
                                                 Timetable
                                             </a>
                                         </li>
@@ -56,7 +63,6 @@
     <div role="main" class="main">
             <app-search></app-search>
             <router-outlet></router-outlet>
-            <!-- <app-student-list></app-student-list> -->
     </div>
     <div class="header-row justify-content-end pb-lg-3">
         <ul class="header-social-icons social-icons d-none d-sm-block social-icons-clean d-sm-0">
