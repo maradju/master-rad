@@ -6,10 +6,10 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name="student")
+@Table(name="professor")
 @Getter
 @Setter
-public class Student {
+public class Professor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,8 +22,8 @@ public class Student {
     @Column(name="last_name")
     private String lastName;
 
-    @Column(name="parent_name")
-    private String parentName;
+    @Column(name="about")
+    private String about;
 
     @Column(name="mobile")
     private String mobile ;
@@ -41,6 +41,6 @@ public class Student {
     private String password;
 
     @ManyToOne
-    @JoinColumn(name="role_id", nullable=false)
+    @JoinColumn(name="role_id2", nullable=false)
     private Role role;
 }

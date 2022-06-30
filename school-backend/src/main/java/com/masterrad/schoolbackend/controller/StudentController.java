@@ -24,7 +24,7 @@ public class StudentController {
     }
 
     @GetMapping("/students")
-    public List<Student> returnStudents(@Valid @RequestBody Student student) {
+    public List<Student> returnStudents() {
         return studentRepository.findAll();
     }
 
@@ -39,9 +39,14 @@ public class StudentController {
         Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new ResourceNotFoundException( "Student not found for this id:" + studentId));
 
-        student.setName(studentDetails.getName());
+        student.setFirstName(studentDetails.getFirstName());
+        student.setLastName(studentDetails.getLastName());
+        student.setParentName(studentDetails.getParentName());
+        student.setMobile(studentDetails.getMobile());
         student.setEmail(studentDetails.getEmail());
-        student.setJmbg(studentDetails.getJmbg());
+        student.setImageUrl(studentDetails.getImageUrl());
+        student.setUsername(studentDetails.getUsername());
+        student.setPassword(studentDetails.getPassword());
 
         final Student updatedStudent = studentRepository.save(student);
         return ResponseEntity.ok(updatedStudent);
